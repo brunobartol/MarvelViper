@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P6I-e2-KWp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Character View Controller-->
+        <scene sceneID="GJs-wf-RlX">
+            <objects>
+                <viewController storyboardIdentifier="CharacterViewController" title="Characters" id="P6I-e2-KWp" userLabel="Character View Controller" customClass="CharacterViewController" customModule="MarvelViper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nWx-S8-zdu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aYM-58-1sc">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ptr-2Z-8vq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="833"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aAx-BY-UwG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aAx-BY-UwG" firstAttribute="leading" secondItem="aeH-EE-TVV" secondAttribute="leading" id="18M-3u-CAC"/>
+                            <constraint firstItem="aAx-BY-UwG" firstAttribute="top" secondItem="aeH-EE-TVV" secondAttribute="top" id="B78-4H-4or"/>
+                            <constraint firstItem="aAx-BY-UwG" firstAttribute="trailing" secondItem="aeH-EE-TVV" secondAttribute="trailing" id="IN0-J9-91y"/>
+                            <constraint firstItem="aeH-EE-TVV" firstAttribute="bottom" secondItem="aYM-58-1sc" secondAttribute="bottom" id="NkZ-uB-65T"/>
+                            <constraint firstItem="aYM-58-1sc" firstAttribute="trailing" secondItem="aeH-EE-TVV" secondAttribute="trailing" id="VbG-Hh-wsK"/>
+                            <constraint firstItem="aYM-58-1sc" firstAttribute="top" secondItem="aAx-BY-UwG" secondAttribute="bottom" id="X4b-oQ-LgF"/>
+                            <constraint firstItem="aYM-58-1sc" firstAttribute="top" secondItem="aAx-BY-UwG" secondAttribute="bottom" id="YwV-62-C7i"/>
+                            <constraint firstItem="aYM-58-1sc" firstAttribute="leading" secondItem="aeH-EE-TVV" secondAttribute="leading" id="lvq-R2-GYw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aeH-EE-TVV"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="aAx-BY-UwG" id="rpG-6R-olc"/>
+                        <outlet property="tableView" destination="aYM-58-1sc" id="OfM-Hm-gJC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jg5-aL-kss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="-127.23214285714285"/>
+        </scene>
+    </scenes>
+</document>
