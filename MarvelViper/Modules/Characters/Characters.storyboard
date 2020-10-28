@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P6I-e2-KWp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Character View Controller-->
+        <scene sceneID="GJs-wf-RlX">
+            <objects>
+                <viewController storyboardIdentifier="CharactersViewController" title="Characters" id="P6I-e2-KWp" userLabel="Character View Controller" customClass="CharactersViewController" customModule="MarvelViper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nWx-S8-zdu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aYM-58-1sc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="906"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ptr-2Z-8vq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="833"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </tableView>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aYM-58-1sc" firstAttribute="centerX" secondItem="aeH-EE-TVV" secondAttribute="centerX" id="Ntt-lv-ER0"/>
+                            <constraint firstItem="aeH-EE-TVV" firstAttribute="top" secondItem="aYM-58-1sc" secondAttribute="top" constant="44" id="XHX-vY-zFM"/>
+                            <constraint firstItem="aYM-58-1sc" firstAttribute="leading" secondItem="aeH-EE-TVV" secondAttribute="leading" id="wqC-lV-E29"/>
+                            <constraint firstItem="aYM-58-1sc" firstAttribute="centerY" secondItem="aeH-EE-TVV" secondAttribute="centerY" id="y9l-aZ-srQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aeH-EE-TVV"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aYM-58-1sc" id="LtJ-Nk-IJ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jg5-aL-kss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="-127.23214285714285"/>
+        </scene>
+    </scenes>
+</document>

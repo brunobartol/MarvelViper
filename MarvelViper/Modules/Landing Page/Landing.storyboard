@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Landing View Controller-->
+        <scene sceneID="fsf-72-W9x">
+            <objects>
+                <viewController storyboardIdentifier="LandingViewController" id="Mgk-QR-xsA" customClass="LandingViewController" customModule="MarvelViper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tI8-lu-XXk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyImage" translatesAutoresizingMaskIntoConstraints="NO" id="DL7-xI-C2x">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hG4-Up-lUf">
+                                <rect key="frame" x="142" y="705" width="130" height="30"/>
+                                <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Fx-m1-XkC"/>
+                                    <constraint firstAttribute="width" constant="130" id="Lzr-D1-BRZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="CONTINUE">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="black"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DL7-xI-C2x" firstAttribute="centerX" secondItem="hG4-Up-lUf" secondAttribute="centerX" id="B28-6b-YMv"/>
+                            <constraint firstItem="hG4-Up-lUf" firstAttribute="top" secondItem="4b8-JA-l13" secondAttribute="top" constant="661" id="KMP-fG-NAD"/>
+                            <constraint firstItem="DL7-xI-C2x" firstAttribute="bottom" secondItem="4b8-JA-l13" secondAttribute="bottom" constant="34" id="R96-jN-1kY"/>
+                            <constraint firstItem="DL7-xI-C2x" firstAttribute="centerY" secondItem="tI8-lu-XXk" secondAttribute="centerY" id="vhi-BD-MgQ"/>
+                            <constraint firstItem="DL7-xI-C2x" firstAttribute="leading" secondItem="4b8-JA-l13" secondAttribute="leading" id="wGV-Vy-0pI"/>
+                            <constraint firstItem="hG4-Up-lUf" firstAttribute="centerX" secondItem="4b8-JA-l13" secondAttribute="centerX" id="wun-AF-Pdh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4b8-JA-l13"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="hG4-Up-lUf" id="UzT-DB-hh8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bf-fI-ME9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="emptyImage" width="427" height="760"/>
+    </resources>
+</document>

@@ -2,13 +2,13 @@ import UIKit
 
 class TabBarRouter {
     
-    var viewController: UIViewController
-    
     typealias Submodules = (
-        character: UIViewController,
-        comic: UIViewController,
+        characters: UIViewController,
+        comics: UIViewController,
         settings: UIViewController
     )
+    
+    private weak var viewController: UIViewController?
     
     init(viewController: UIViewController) {
         self.viewController = viewController
@@ -17,18 +17,23 @@ class TabBarRouter {
 
 extension TabBarRouter {
     static func tabs(usingSubmodules submodules: Submodules) -> MarvelTabs {
-        let characterTabItem = UITabBarItem(title: "Heroes", image: UIImage(systemName: "person.fill"), tag: 11)
-        let comicTabItem = UITabBarItem(title: "Comics", image: UIImage(systemName: "person.fill"), tag: 12)
-        let settingsTabItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "person.fill"), tag: 13)
         
-        submodules.character.tabBarItem = characterTabItem
-        submodules.comic.tabBarItem = comicTabItem
-        submodules.settings.tabBarItem = settingsTabItem
+        let charactersTabBarItem = UITabBarItem(title: "Heroes", image: UIImage(systemName: "person.fill"), tag: 100)
+        let comicsTabBarItem = UITabBarItem(title: "Comics", image: UIImage(systemName: "book.fill"), tag: 101)
+        let settingsTabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 102)
+        
+        submodules.characters.tabBarItem = charactersTabBarItem
+        submodules.comics.tabBarItem = comicsTabBarItem
+        submodules.settings.tabBarItem = settingsTabBarItem
         
         return (
-            character: submodules.character,
-            comic: submodules.comic,
+            characters: submodules.characters,
+            comics: submodules.comics,
             settings: submodules.settings
         )
     }
+}
+
+extension TabBarRouter: TabBarWireframe {
+    
 }
